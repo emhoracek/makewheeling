@@ -27,7 +27,9 @@ const MakeWheelingWhat = () => {
   const [partialAdjective, setPartialAdjective] = useState("");
   const [action, setAction] = useState("type");
   const [hasInput, setHasInput] = useState(false);
+  const [disabled, setDisabled] = useState(false)
   const [ready, setReady] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
 
   const onInput = (e) => {
     if (e.target.value === "") {
@@ -38,7 +40,8 @@ const MakeWheelingWhat = () => {
   }
 
   const onSubmit = (e) => {
-    postToAirtableViaGlitch(e, () => {}, () => {})
+    setDisabled(true)
+    postToAirtableViaGlitch(e, () => {setSubmitted(true), setDisabled(false)}, () => {setDisabled(false)})
   }
 
   useEffect(() => {
@@ -54,9 +57,9 @@ const MakeWheelingWhat = () => {
 
   const submitValue =
     ready ? "Send" : "Please wait...";
-  const submitDisabled = ready ? undefined : "disabled";
+  const submitDisabled = ready && !disabled ? undefined : "disabled";
 
-  const formStyle = { display : hasInput ? "block": "none"}
+  const formStyle = { display : hasInput && !submitted ? "block": "none"}
 
   useEffect(() => {
     if (action === "type") {
