@@ -42,14 +42,14 @@ const MakeWheelingWhat = () => {
   }
 
   useEffect(() => {
-    wakeUp(5, () => {
+    wakeUp(5,
       () => {
         setReady(true);
       },
       () => {
-        
+
       }
-    })
+    )
   }, [])
 
   const submitValue =
