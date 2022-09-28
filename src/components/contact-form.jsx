@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const glitch = "https://make-wheeling-airtable.glitch.me";
 
-function postToAirtableViaGlitch(e, onSuccess, onError) {
-  e.preventDefault();
-
-  var form = document.getElementById("contact-form");
-
+function formToJson(form) {
   const formData = new FormData(form);
   let jsonObject = {};
 
@@ -27,29 +23,7 @@ function postToAirtableViaGlitch(e, onSuccess, onError) {
       jsonObject[key] = value;
     }
   }
-
-  window
-    .fetch(glitch + "/api/contact", {
-      method: "POST",
-      body: JSON.stringify(jsonObject),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-    .then(function (resp) {
-      return resp.json();
-    })
-    .then(function (json) {
-      if (json.success) {
-        onSuccess()
-      } else {
-        throw "Failure :(";
-      }
-    })
-    .catch(function () {
-      onError()
-    });
+  return jsonObject;
 }
 
 const wakeUp = (countdown, onWoke, onError) => {
@@ -67,7 +41,7 @@ const wakeUp = (countdown, onWoke, onError) => {
       })
       .then((json) => {
         if (json.ready) {
-          onWoke()
+          onWoke();
         } else {
           window.setTimeout(() => {
             wakeUp(countdown - 1, onWoke, onError);
@@ -75,42 +49,85 @@ const wakeUp = (countdown, onWoke, onError) => {
         }
       });
   } else {
-    onError()
+    onError();
   }
 };
 
 const ContactForm = () => {
-  const [ready, setReady] = useState(false)
-  const [error, setError] = useState(false)
-  const [showMessage, setShowMessage] = useState(false)
-  const [message, setMessage] = useState("")
-  
-  
+  const [ready, setReady] = useState(false);
+  const [error, setError] = useState(false);
+  const [displayMessage, setDisplayMessage] = useState("none");
+  const [message, setMessage] = useState({});
+
   const onSuccess = () => {
-    
-  }
-  
-  wakeUp(5, () => {
-        setReady(true)
-        setError(false)
-  }, () => {
-    setError(true)
-    setShowMessage(true)
-    setMessage(
-      "Sorry, the form isn't working. Please email libby@libbyhoracek.com to contact me."
-    );
-  })
-  
+    setError(false);
+    setDisplayMessage("block");
+    setMessage({
+      title: "Success!",
+      message:
+        "We'll get in touch soon!",
+    });};
+
+  const onFail = () => {
+    setError(true);
+    setDisplayMessage("block");
+    setMessage({
+      title: "Error",
+      message:
+        "Sorry, the form isn't working. Please email libby@libbyhoracek.com to contact me.",
+    });
+  };
+
+  const postToAirtableViaGlitch = (e) => {
+    e.preventDefault();
+
+    var form = e.target;
+
+    window
+      .fetch(glitch + "/api/contact", {
+        method: "POST",
+        body: JSON.stringify(formToJson(form)),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
+      .then(function (resp) {
+        return resp.json();
+      })
+      .then(function (json) {
+        if (json.success) {
+          onSuccess();
+        } else {
+          throw "Failure :(";
+        }
+      })
+      .catch(function () {
+        onFail();
+      });
+  };
+
+  wakeUp(
+    5,
+    () => {
+      setDisplayMessage("none");
+      setReady(true);
+      setError(false);
+    },
+    onFail
+  );
+
   const messageStyle = {
-    display: showMessage ? "block" : "none"
-  }
-  
-  const submitValue = ready && !error ? "Send" : (error ? "Error :(" : "Please wait...")
-  const submitDisabled = ready && !error ? undefined : "disabled"
-  
+    display: displayMessage,
+  };
+
+  const submitValue =
+    ready && !error ? "Send" : error ? "Error :(" : "Please wait...";
+  const submitDisabled = ready && !error ? undefined : "disabled";
+
   return (
     <>
-      <form id="contact-form">
+      <form id="contact-form" action="#" onSubmit={postToAirtableViaGlitch}>
         <p>
           <label for="name">Name</label>
           <br />
@@ -126,12 +143,17 @@ const ContactForm = () => {
           <textarea name="comments" rows="4"></textarea>
         </p>
 
-        <input type="submit" disabled={submitDisabled} id="submit-button" value={submitValue} />
+        <input
+          type="submit"
+          disabled={submitDisabled}
+          id="submit-button"
+          value={submitValue}
+        />
       </form>
-      <div styles={messageStyle}>
-        <h3 id="message-title">Thank you!</h3>
+      <div style={messageStyle}>
+        <h3 id="message-title">{message.title}</h3>
 
-        <p>We'll get back to you shortly.</p>
+        <p>{message.body}</p>
       </div>
     </>
   );
