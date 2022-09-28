@@ -46,7 +46,9 @@ const MakeWheelingWhat = () => {
       () => {
         setReady(true);
       },
-        onFail
+      () => {
+        
+      }
     })
   }, [])
 
