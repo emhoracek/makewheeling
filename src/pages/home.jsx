@@ -29,6 +29,10 @@ export default function Home() {
 
       <div class="coffee-and-tech">
         <h2>Coffee &amp; Tech</h2>
+
+        <img src="https://cdn.glitch.global/a66f4dd6-ce3f-45aa-a4fe-67fb736c819b/309309552_10159902218436664_7776853586986855260_n.jpg?v=1664397802119"
+             className="flyer"
+             alt="A flyer for coffee & tech" />
         <p>
           <strong>Coffee &amp; Tech</strong> is Make Wheeling's first program.
           It's a meet-up for tech professionals and anyone who is interested in
@@ -67,6 +71,9 @@ export default function Home() {
         </p>
 
         <p>Times and locations of future meetings may change.</p>
+
+        <p><a href="https://cdn.glitch.global/a66f4dd6-ce3f-45aa-a4fe-67fb736c819b/309309552_10159902218436664_7776853586986855260_n.jpg?v=1664398365309">
+          Download a flyer to share!</a></p>
       </div>
 
       <div class="faq">

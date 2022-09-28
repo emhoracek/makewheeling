@@ -89,8 +89,9 @@ const MakeWheelingWhat = () => {
   return (
     <>
       <form onSubmit={onSubmit} action="#">
-        <h1 class="title">
-          Make Wheeling <input id="what" name="blank" onInput={onInput} placeholder={partialAdjective} />
+        <h1 className="title">
+          <span className="makewheeling">Make Wheeling</span>
+          <input id="what" name="blank" onInput={onInput} placeholder={partialAdjective} />
         </h1>
         <div style={formStyle}>
           <p>Submit how you would like to make your mark on the city and it may be 
