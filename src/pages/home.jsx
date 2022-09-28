@@ -1,6 +1,7 @@
 import * as React from "react";
 import { animated } from "react-spring";
 import MakeWheelingWhat from "../components/make-wheeling-what.jsx";
+import ContactForm from "../components/contact-form.jsx";
 import { Link } from "wouter";
 
 
@@ -125,7 +126,9 @@ export default function Home() {
           </li>
           <li>
             <dt>How can I get involved?</dt>
-            <dd>Send an email to libby@libbyhoracek.com.
+            <dd>
+              Fill out the form below and I'll be in touch! <br />
+              <ContactForm />
             </dd>
           </li>
         </ol>

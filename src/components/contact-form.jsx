@@ -57,16 +57,8 @@ const ContactForm = () => {
   const [ready, setReady] = useState(false);
   const [error, setError] = useState(false);
   const [displayMessage, setDisplayMessage] = useState("none");
+  const [displayForm, setDisplayForm] = useState("block");
   const [message, setMessage] = useState({});
-
-  const onSuccess = () => {
-    setError(false);
-    setDisplayMessage("block");
-    setMessage({
-      title: "Success!",
-      message:
-        "We'll get in touch soon!",
-    });};
 
   const onFail = () => {
     setError(true);
@@ -82,7 +74,6 @@ const ContactForm = () => {
     e.preventDefault();
 
     var form = e.target;
-
     window
       .fetch(glitch + "/api/contact", {
         method: "POST",
@@ -97,7 +88,14 @@ const ContactForm = () => {
       })
       .then(function (json) {
         if (json.success) {
-          onSuccess();
+          setError(false);
+          setDisplayMessage("block");
+          setDisplayForm("none");
+          setMessage({
+            title: "Success!",
+            message:
+              "We'll get in touch soon!",
+          });
         } else {
           throw "Failure :(";
         }
@@ -107,15 +105,10 @@ const ContactForm = () => {
       });
   };
 
-  wakeUp(
-    5,
-    () => {
-      setDisplayMessage("none");
-      setReady(true);
-      setError(false);
-    },
-    onFail
-  );
+
+  const formStyle = {
+    display: displayForm,
+  };
 
   const messageStyle = {
     display: displayMessage,
@@ -125,9 +118,21 @@ const ContactForm = () => {
     ready && !error ? "Send" : error ? "Error :(" : "Please wait...";
   const submitDisabled = ready && !error ? undefined : "disabled";
 
+  useEffect(() => {
+    wakeUp(
+      5,
+      () => {
+        setDisplayMessage("none");
+        setReady(true);
+        setError(false);
+      },
+      onFail
+    );
+  }, [])
+
   return (
     <>
-      <form id="contact-form" action="#" onSubmit={postToAirtableViaGlitch}>
+      <form style={formStyle} id="contact-form" action="#" onSubmit={postToAirtableViaGlitch}>
         <p>
           <label for="name">Name</label>
           <br />
@@ -153,7 +158,7 @@ const ContactForm = () => {
       <div style={messageStyle}>
         <h3 id="message-title">{message.title}</h3>
 
-        <p>{message.body}</p>
+        <p>{message.message}</p>
       </div>
     </>
   );
