@@ -72,6 +72,8 @@ export default function Home() {
 
         <p>Times and locations of future meetings may change.</p>
 
+        <p><a href="https://fb.me/e/2dSfErSy6">RSVP on Facebook (optional!)</a></p>
+
         <p><a href="https://cdn.glitch.global/a66f4dd6-ce3f-45aa-a4fe-67fb736c819b/Screen%20Shot%202022-09-28%20at%204.32.26%20PM.png?v=1664397155663">
           Download a flyer to share!</a></p>
       </div>
