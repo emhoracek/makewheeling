@@ -219,6 +219,8 @@ textarea {
 }
 .makewheeling { padding-left: 16px }
 
+.submit-idea { margin-left: 0.5em; }
+
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 2.75rem;
