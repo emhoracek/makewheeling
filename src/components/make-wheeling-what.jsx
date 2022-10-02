@@ -28,8 +28,18 @@ const MakeWheelingWhat = () => {
   const [action, setAction] = useState("type");
   const [hasInput, setHasInput] = useState(false);
   const [disabled, setDisabled] = useState(false)
+  const [error, setError] = useState(false)
   const [ready, setReady] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [timeLeft, setTimeLeft] = useState(15)
+
+  const decrementTimeLeft = () => {
+    if (timeLeft > 0) { 
+      setTimeLeft(timeLeft - 1)
+    } else {
+      setError("Unable to reach database")
+    };
+  }
 
   const onInput = (e) => {
     if (e.target.value === "") {
@@ -56,12 +66,13 @@ const MakeWheelingWhat = () => {
   }, [])
 
   const submitValue =
-    ready ? "Send" : "Please wait...";
+    ready && !error ? "Send" : error ? "Error :(" : `Please wait... ${timeLeft}`;
   const submitDisabled = ready && !disabled ? undefined : "disabled";
 
   const formStyle = { display : hasInput && !submitted ? "block": "none"}
 
   useEffect(() => {
+    setTimeout(decrementTimeLeft, 1000)
     if (action === "type") {
       const currLetters = partialAdjective.length;
       if (currLetters < adjective.length) {
@@ -86,6 +97,10 @@ const MakeWheelingWhat = () => {
     }
   }, [partialAdjective, action]);
 
+  useEffect(() => {
+    setTimeout(decrementTimeLeft, 1000)
+  }, [timeLeft])
+
   return (
     <>
       <form onSubmit={onSubmit} action="#">
@@ -98,7 +113,7 @@ const MakeWheelingWhat = () => {
             included on the website.
           </p>
           <label>Your name: </label><input name="name" />
-          <input type="submit" disabled={submitDisabled} value={submitValue} />
+          <input className="submit-idea" type="submit" disabled={submitDisabled} value={submitValue} />
         </div>
       </form>
     </>

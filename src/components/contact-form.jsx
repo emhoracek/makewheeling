@@ -7,6 +7,15 @@ const ContactForm = () => {
   const [displayMessage, setDisplayMessage] = useState("none");
   const [displayForm, setDisplayForm] = useState("block");
   const [message, setMessage] = useState({});
+  const [timeLeft, setTimeLeft] = useState(15);
+
+  const decrementTimeLeft = () => {
+    if (timeLeft > 0) { 
+      setTimeLeft(timeLeft - 1)
+    } else {
+      setError("Unable to reach database.")
+    };
+  }
 
   const onFail = () => {
     setError(true);
@@ -41,7 +50,7 @@ const ContactForm = () => {
   };
 
   const submitValue =
-    ready && !error ? "Send" : error ? "Error :(" : "Please wait...";
+    ready && !error ? "Send" : error ? "Error :(" : `Please wait... ${timeLeft}`;
   const submitDisabled = ready && !error ? undefined : "disabled";
 
   useEffect(() => {
@@ -55,6 +64,10 @@ const ContactForm = () => {
       onFail
     );
   }, [])
+
+  useEffect(() => {
+    setTimeout(decrementTimeLeft, 1000)
+  }, [timeLeft])
 
   return (
     <>
