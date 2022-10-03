@@ -12,9 +12,7 @@ const ContactForm = () => {
   const decrementTimeLeft = () => {
     if (timeLeft > 0) { 
       setTimeLeft(timeLeft - 1)
-    } else {
-      setError("Unable to reach database.")
-    };
+    }
   }
 
   const onFail = () => {
