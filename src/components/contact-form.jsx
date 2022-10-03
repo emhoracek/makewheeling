@@ -7,7 +7,7 @@ const ContactForm = () => {
   const [displayMessage, setDisplayMessage] = useState("none");
   const [displayForm, setDisplayForm] = useState("block");
   const [message, setMessage] = useState({});
-  const [timeLeft, setTimeLeft] = useState(15);
+  const [timeLeft, setTimeLeft] = useState(20);
 
   const decrementTimeLeft = () => {
     if (timeLeft > 0) { 

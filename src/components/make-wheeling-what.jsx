@@ -31,7 +31,7 @@ const MakeWheelingWhat = () => {
   const [error, setError] = useState(false)
   const [ready, setReady] = useState(false)
   const [submitted, setSubmitted] = useState(false)
-  const [timeLeft, setTimeLeft] = useState(15)
+  const [timeLeft, setTimeLeft] = useState(20)
 
   const decrementTimeLeft = () => {
     if (timeLeft > 0) { 
