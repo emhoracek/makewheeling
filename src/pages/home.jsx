@@ -48,7 +48,7 @@ export default function Home() {
         </p>
 
         <h3>
-          Next meeting: Tuesday, October 11, 2022
+          Next meeting: Tuesday, October 18, 2022
         </h3>
 
         <p>
@@ -72,14 +72,18 @@ export default function Home() {
 
         <p>Times and locations of future meetings may change.</p>
 
-        <p><a href="https://fb.me/e/2q3dc2xwW">RSVP on Facebook (optional!)</a></p>
+        <p><a href="https://fb.me/e/3CcJUXAyo">RSVP on Facebook (optional!)</a></p>
 
         <p><a href="https://cdn.glitch.global/a66f4dd6-ce3f-45aa-a4fe-67fb736c819b/Screen%20Shot%202022-09-28%20at%204.32.26%20PM.png?v=1664397155663">
           Download a flyer to share!</a></p>
 
-        <h3>Last meeting</h3>
+        <h3>Previous meetings</h3>
 
-        <p>At the Oct 4 2022 meeting, we discussed IoT (Internet of Things), 
+        <p>Oct 11, 2022: Only Libby attended! But that was okay, the coffee 
+          was good and she made good progress on a project.
+        </p>
+
+        <p>Oct 4, 2022: We discussed IoT (Internet of Things), 
           Hactoberfest, small board computers, the PICO-8 Fantasy Console, 
           and several other topics.
         </p>
