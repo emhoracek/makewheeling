@@ -46,7 +46,7 @@ export default function Home() {
         </p>
 
         <h3>
-          Next meeting: Tuesday, October 25, 2022
+          Next meeting: Tuesday, November 1, 2022
         </h3>
 
         <p>
@@ -75,12 +75,15 @@ export default function Home() {
 
         <h3>Previous meetings</h3>
 
+        <p>Oct 25, 2022: Only one attendee.
+        </p>
+
         <p>Oct 18, 2022: We discussed the WVNCC makerspace, using solar panels 
             in electronics projects, making a bus map with Javascript, {" "}
             <a href="https://aitp-wheeling.com">AITP</a> membership, and other topics.
         </p>
 
-        <p>Oct 11, 2022: Only one attendee
+        <p>Oct 11, 2022: Only one attendee.
         </p>
 
         <p>Oct 4, 2022: We discussed IoT (Internet of Things), 
