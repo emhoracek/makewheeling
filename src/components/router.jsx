@@ -2,6 +2,7 @@ import * as React from "react";
 import { Switch, Route, Router } from "wouter";
 import Home from "../pages/home";
 import About from "../pages/about";
+import Zine from "../pages/zine";
 import Contact from "../pages/contact";
 
 /**
@@ -16,6 +17,7 @@ export default () => (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/zine" component={Zine} />
       <Route path="/contact" component={Contact} />
     </Switch>
 );
