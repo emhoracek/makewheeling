@@ -46,7 +46,7 @@ export default function Home() {
         </p>
 
         <h3>
-          Next meeting: Tuesday, November 8, 2022
+          Next meeting: Tuesday, November 22, 2022
         </h3>
 
         <p>
@@ -74,27 +74,6 @@ export default function Home() {
 
         <p><a href="https://cdn.glitch.global/a66f4dd6-ce3f-45aa-a4fe-67fb736c819b/Screen%20Shot%202022-09-28%20at%204.32.26%20PM.png?v=1664397155663">
           Download a flyer to share!</a></p>
-
-        <h3>Previous meetings</h3>
-
-        <p>Nov 1, 2022: Only one attendee.
-        </p>
-
-        <p>Oct 25, 2022: Only one attendee.
-        </p>
-
-        <p>Oct 18, 2022: We discussed the WVNCC makerspace, using solar panels 
-            in electronics projects, making a bus map with Javascript, {" "}
-            <a href="https://aitp-wheeling.com">AITP</a> membership, and other topics.
-        </p>
-
-        <p>Oct 11, 2022: Only one attendee.
-        </p>
-
-        <p>Oct 4, 2022: We discussed IoT (Internet of Things), 
-          Hactoberfest, small board computers, the PICO-8 Fantasy Console, 
-          and several other topics.
-        </p>
       </div>
 
       <div class="faq">
