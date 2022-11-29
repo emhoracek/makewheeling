@@ -46,8 +46,10 @@ export default function Home() {
         </p>
 
         <h3>
-          Next meeting: Tuesday, November 22, 2022
+          Next meeting: Tuesday, December 13, 2022
         </h3>
+
+        <p><strong>No meeting December 6!</strong></p>
 
         <p>
           Location:&nbsp;
@@ -68,9 +70,7 @@ export default function Home() {
           </span>
         </p>
 
-        <p>Times and locations of future meetings may change.</p>
-
-        <p><strong><em>There will be no meeting on December 6, 2022.</em></strong></p>
+        <p><strong><em>The final Coffee &amp; Tech will be December 27, 2022.</em></strong></p>
 
         <p><a href="https://cdn.glitch.global/a66f4dd6-ce3f-45aa-a4fe-67fb736c819b/Screen%20Shot%202022-09-28%20at%204.32.26%20PM.png?v=1664397155663">
           Download a flyer to share!</a></p>
