@@ -1,5 +1,4 @@
 import * as React from "react";
-import { animated } from "react-spring";
 import MakeWheelingWhat from "../components/make-wheeling-what.jsx";
 import ContactForm from "../components/contact-form.jsx";
 
@@ -46,7 +45,7 @@ export default function Home() {
         </p>
 
         <h3>
-          Next meeting: Tuesday, December 13, 2022
+          Next meeting: Tuesday, December 20, 2022
         </h3>
 
         <p><strong>No meeting December 6!</strong></p>
@@ -61,7 +60,7 @@ export default function Home() {
           <span class="small"> (but if you can't make it that early, just show up whenever)
           </span>
           <br />
-          End: <strong>8:30am</strong>
+          End: <strong>9am</strong>
           <span class="small"> (but if you have to leave before then, no problem)
           </span>
           <br />
