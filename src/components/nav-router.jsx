@@ -1,9 +1,5 @@
 import * as React from "react";
-import { Route, Router, Switch } from "wouter";
-import Home from "../pages/home";
-import About from "../pages/about";
-import Zine from "../pages/zine";
-import Contact from "../pages/contact";
+import { Router, Link } from "wouter";
 
 /**
 * The router is imported in app.jsx
@@ -38,11 +34,12 @@ const useHashLocation = () => {
 
 export default () => (
     <Router hook={useHashLocation}>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/zine" component={Zine} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
+        <div className="links">
+          <Link href="/">Home</Link>
+          <span className="divider">|</span>
+          <Link href="/zine">Solarpunk Zine</Link>
+          <span className="divider">|</span>
+          <Link href="/contact">Contact</Link>
+        </div>
     </Router>
 );

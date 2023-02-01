@@ -16,6 +16,7 @@ import "./styles/styles.css";
 
 // Where all of our pages come from
 import PageRouter from "./components/router.jsx";
+import NavRouter from "./components/nav-router.jsx";
 
 // The component that adds our Meta tags to the page
 import Seo from './components/seo.jsx';
@@ -33,21 +34,7 @@ export default function Home() {
       </main>
       {/* Footer links to Home and About, Link elements matched in router.jsx */}
       <footer className="footer">
-        <div className="links">
-          <Link href="/">Home</Link>
-          <span className="divider">|</span>
-          <Link href="/zine">Solarpunk Zine</Link>
-          <span className="divider">|</span>
-          <Link href="/contact">Contact</Link>
-        </div>
-        <a
-          className="btn--remix"
-          target="_top"
-          href="https://glitch.com/edit/#!/remix/glitch-hello-react"
-        >
-          <img src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140" alt="" />
-          Remix on Glitch
-        </a>
+        <NavRouter />
       </footer>
     </Router>
   );
