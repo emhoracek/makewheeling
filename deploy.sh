@@ -6,6 +6,10 @@ set -e
 # build
 npm run build
 
+# cp static assets
+rm -r build/static || true
+cp -r static build
+
 # navigate into the build output directory
 cd build
 
