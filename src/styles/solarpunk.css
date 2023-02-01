@@ -1,0 +1,13 @@
+td {
+  background: #ffffff88;
+  padding-left: 0.5em;
+}
+
+th:last-child {
+  width: 50%;
+}
+
+figure { text-align: center;}
+figure img { margin: auto }
+
+caption { width: 100%;}
