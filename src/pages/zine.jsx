@@ -129,7 +129,7 @@ export default function Zine() {
         </p>
 
         <p>Please send the entire completed work. It must be between 50 and 750 words. If accepted for the zine, 
-          you be paid right away.
+          you&apos; be paid right away.
         </p>
       </div>
 
