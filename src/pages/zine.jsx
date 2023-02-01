@@ -48,7 +48,8 @@ export default function Zine() {
 
         <figure>
         <img src="/static/jessicaperlstein.webp" width="500" alt="A woman smells a rose in a city full of plants and gardens." />
-        <caption>Art by <a href="https://jessicaperlstein.com/collections/artwork/products/the-fifth-sacred-thing-1">Jessica Perlstein</a></caption>
+        <figcaption>
+          Art by <a href="https://jessicaperlstein.com/collections/artwork/products/the-fifth-sacred-thing-1">Jessica Perlstein</a></figcaption>
         </figure>
 
         <ul>
