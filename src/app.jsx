@@ -36,6 +36,8 @@ export default function Home() {
         <div className="links">
           <Link href="/">Home</Link>
           <span className="divider">|</span>
+          <Link href="/zine">Solarpunk Zine</Link>
+          <span className="divider">|</span>
           <Link href="/contact">Contact</Link>
         </div>
         <a
