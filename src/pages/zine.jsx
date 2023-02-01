@@ -95,7 +95,7 @@ export default function Zine() {
       
         <p>Thanks to the grant, we'll be able to pay contributors <strong>$100 for a full (5.5 x 8.5) page of black-and-white art</strong> and <strong>$100 for 500 words of writing (20 cents per word)</strong>. Two artists will be paid <strong>$200 for color pieces</strong>, one for each cover.</p>
 
-        <p>If we can pre-sell 60 copies, we&apos;ll be able to print 100 copies of the zine. If we can pre-sell more, we&apos;ll be able to increase the size of the zine to 24 pages (expanding the number of contributors), print the zine on recycled paper, and reward pre-sale buyers with free solarpunk stickers. (Each of these will be Kickstarter-style “stretch goal”.)</p>
+        <p>Pre-sales will pay for printing the zine. If we can pre-sell 60 copies, we&apos;ll be able to print 100 copies of the zine. If we can pre-sell more, we&apos;ll be able to increase the size of the zine to 24 pages (expanding the number of contributors), print the zine on recycled paper, and reward pre-sale buyers with free solarpunk stickers. (Each of these will be Kickstarter-style “stretch goal”.)</p>
 
         <p>Any profit made will increase payments to each contributor. If 250 copies are sold, then each of the contributors will get an average of $22 extra in payment. </p>
 
