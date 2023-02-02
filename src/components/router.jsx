@@ -1,9 +1,6 @@
 import * as React from "react";
 import { Route, Router, Switch } from "wouter";
 import Home from "../pages/home";
-import About from "../pages/about";
-import Zine from "../pages/zine";
-import Contact from "../pages/contact";
 
 /**
 * The router is imported in app.jsx
