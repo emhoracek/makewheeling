@@ -33,11 +33,9 @@ const useHashLocation = () => {
 };
 
 export default () => (
-    <Router hook={useHashLocation}>
         <div className="links">
-          <Link href="/">Home</Link>
+          <a href="/">Home</a>
           <span className="divider">|</span>
-          <a href="https://makewheeling.com/zine">Solarpunk Zine</a>
+          <a href="https://makewheeling.com/solarpunk">Solarpunk Zine</a>
         </div>
-    </Router>
 );
