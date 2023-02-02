@@ -1,6 +1,4 @@
 import * as React from "react";
-import { animated } from "react-spring";
-import MakeWheelingWhat from "../components/make-wheeling-what.jsx";
 import ContactForm from "../components/contact-form.jsx";
 import { Helmet } from 'react-helmet-async';
 import "../styles/solarpunk.css";
@@ -20,7 +18,7 @@ export default function Zine() {
       <div className="about">
         <h2>Call for Submissions</h2>
         <p>
-          <cite>Rust &amp; Rebirth: Visions of a Solarpunk Wheeling</cite> is seeking submissions of art, short essays, and microfiction for a zine envisioning an ecologically sustainable future for Wheeling.
+          <cite>Rust &amp; Rebirth: Visions of a Solarpunk Wheeling</cite> is seeking submissions of art, short essays, and microfiction for a zine envisioning an optimistic and ecologically sustainable future for Wheeling, West Virginia.
         </p>
 
         <p>This zine is funded by a grant from <a href="https://wheelingheritage.org/">Wheeling Heritage</a>.</p>

@@ -40,9 +40,6 @@ export default () => (
     <Router hook={useHashLocation}>
       <Switch>
         <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/zine" component={Zine} />
-        <Route path="/contact" component={Contact} />
       </Switch>
     </Router>
 );

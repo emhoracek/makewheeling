@@ -3,15 +3,28 @@
 # abort on errors
 set -e
 
-# build
+# build main site
 npm run build
 
 # cp static assets
 rm -r build/static || true
 cp -r static build
 
-# navigate into the build output directory
-cd build
+# build solarpunk site
+cd solarpunk
+npm run build
+
+# cp static assets
+rm -r build/static || true
+cp -r static build
+
+# cp solarpunk build into main build
+cd ..
+rm -r build/solarpunk || true
+cp -r solarpunk/build build/solarpunk
+
+# navigate into the main site build output directory
+cd ../build
 
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
