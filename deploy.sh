@@ -24,7 +24,7 @@ rm -r build/solarpunk || true
 cp -r solarpunk/build build/solarpunk
 
 # navigate into the main site build output directory
-cd ../build
+cd build
 
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
