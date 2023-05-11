@@ -109,31 +109,27 @@ export default function Zine() {
 
       <div className="submissions">
         <h2>Submissions</h2>
-        <p>Send submissions to <a href="mailto:solarpunkzine@makewheeling.com">solarpunkzine@makewheeling.com</a> by April 1, 2023. Submissions will be accepted on a rolling basis. If pre-sales allow, we will accept more work, so
-         don&apos;t panic if you don&apos;t hear back right away. We&apos;ll get back to you by May 1st.</p>
+        <p>Send submissions to <a href="mailto:solarpunkzine@makewheeling.com">solarpunkzine@makewheeling.com</a> by July 1, 2023. Submissions will be accepted on a rolling basis. If pre-sales allow, we will accept more work, so
+         don&apos;t panic if you don&apos;t hear back right away. We&apos;ll get back to you by August 1st.</p>
 
         <h3>Art</h3>
         <p>Art should incorporate Wheeling-specific imagery into the solarpunk aesthetic. Think about local architecture, geographical features, native plants and animals, cultures and customs. Not sure what to draw? Consider teaming up with a writer to illustrate an intriguing story or essay.
         </p>
 
-        <p>Please submit a sketch and a few examples of previous completed work. Note whether you&apos;re planning a color cover illustration or an interior black &amp; white illustration. We&apos;ll also accept two-page spreads or multi-page comics.</p>
+        <p>Please submit a sketch and a few examples of previous completed work. We're currently only accepting interior black &amp; white illustrations. We&apos;ll also accept two-page spreads or multi-page comics.</p>
 
         <p>Finished work must be 5.5&quot; x 8.5&quot; with .125&quot; bleed (so a total of 5.625&quot;x8.625&quot;).</p>
 
-        <p>You&apos;ll be paid 50% up front and 50% on completion. Your piece must be finished by June 1, 2023.</p>
+        <p>You&apos;ll be paid 50% up front and 50% on completion. Your piece must be finished by September 1, 2023.</p>
 
         <h3>Essays &amp; Fiction</h3>
-        <p>Written contributions should be short pieces less than 750 words long. This can be a scene of life in a future Wheeling, a list of alternate uses for decommissioned fracking equipment, thoughts on community-building and mutual aid, the biography of a revolutionary who hasn&apos;t yet been born, conservation tips from your great-grandma… Not sure what to write? Consider teaming up with an artist who has an inspiring vision.
-        </p>
-
-        <p>Please send the entire completed work. It must be between 50 and 750 words. If accepted for the zine, 
-          you&apos; be paid right away.
+        <p>We're not currently accepting writing.
         </p>
       </div>
 
       <div className="buying-the-zine">
         <h2>Buying the zine</h2>
-        <p>Want to buy the finished zine? Mark your calendar! Pre-sales at 15% off cover price will be live from April 15 - May 15, 2023. Enter your email to get an alert when pre-sales go live: 
+        <p>Want to buy the finished zine? Pre-sales at 15% off cover price will be live once we have enough art for the zine. Enter your email to get an alert when pre-sales go live: 
         </p>
 
         <ContactForm />
