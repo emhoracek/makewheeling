@@ -46,7 +46,7 @@ React defines site components in [JSX](https://reactjs.org/docs/introducing-jsx.
 
 ← `src/pages/about.jsx`: The content of the About page, defined as a component function.
 
-← `src/pages/home.jsx` The content of the Home page, also defined as a component function. The page includes the animated effect on hover, and title change effect on click (which is also a handy demo of using state data in React).
+← `src/pages/home-old.jsx` The content of the Home page, also defined as a component function. The page includes the animated effect on hover, and title change effect on click (which is also a handy demo of using state data in React).
 
 ## Try this next 🏗️
 
