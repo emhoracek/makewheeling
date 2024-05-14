@@ -7,7 +7,7 @@ set -e
 npm run build
 
 # cp static assets
-rm -r build/static || true
+# rm -r build/static || true
 cp -r static build
 
 # build solarpunk site
@@ -15,12 +15,12 @@ cd solarpunk
 npm run build
 
 # cp static assets
-rm -r build/static || true
+# rm -r build/static || true
 cp -r static build
 
 # cp solarpunk build into main build
 cd ..
-rm -r build/solarpunk || true
+# rm -r build/solarpunk || true
 cp -r solarpunk/build build/solarpunk
 
 # navigate into the main site build output directory
