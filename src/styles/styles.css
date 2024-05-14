@@ -229,3 +229,18 @@ textarea {
     font-size: 2.25rem;
   }
 }
+
+.mobile-form {
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .desktop-form {
+    display: none;
+  }
+  .mobile-form {
+       display: block;
+     }
+}
+
